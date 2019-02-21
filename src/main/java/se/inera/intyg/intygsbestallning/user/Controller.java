@@ -19,6 +19,14 @@ public class Controller {
         var defaultAddress = new Address();
         var customUser = new User(2L, "CustomTolvan", "Twelvansson", defaultAddress);
 
-        return ResponseEntity.ok(List.of(defaultUser, customUser));
+
+        var userWithBuildPattern = new UserWithBuilderPattern.Builder()
+                .id(3L)
+                .firstName("firstName")
+                .lastName("lastname")
+                .address(defaultAddress)
+                .build();
+
+        return ResponseEntity.ok(List.of(defaultUser, customUser, userWithBuildPattern));
     }
 }
