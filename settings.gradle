@@ -3,4 +3,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = 'intygsbestallning-kotlin'
+rootProject.name = 'spring-boot-java-with-kotlin-data-classes'
