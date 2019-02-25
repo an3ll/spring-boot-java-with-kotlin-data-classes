@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-open class IntygsbestallningApplication
+open class SpringBootWithKotlinApplication
 
 fun main(args: Array<String>) {
-	runApplication<IntygsbestallningApplication>(*args)
+	runApplication<se.inera.intyg.intygsbestallning.SpringBootWithKotlinApplication>(*args)
 }

@@ -30,7 +30,7 @@ dependencies {
 
 application {
   // Define the main class for the application.
-  mainClassName = "se.inera.intyg.intygsbestallning.IntygsbestallningApplicationKt"
+  mainClassName = "se.inera.intyg.intygsbestallning.SpringBootWithKotlinApplicationKt"
 }
 
 tasks {
