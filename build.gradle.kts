@@ -22,11 +22,7 @@ dependencies {
 
   // Spring Boot starters
   implementation("org.springframework.boot:spring-boot-starter-web:2.1.3.RELEASE")
-
-  // Kotlin
-  testImplementation("org.jetbrains.kotlin:kotlin-test")
-  testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
-
+  
   // Spring Boot test starters
   testImplementation("org.springframework.boot:spring-boot-starter-test:2.1.3.RELEASE")
 
