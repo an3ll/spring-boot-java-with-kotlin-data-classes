@@ -19,7 +19,6 @@ public class Controller {
         var defaultAddress = new Address();
         var customUser = new User(2L, "CustomTolvan", "Twelvansson", defaultAddress);
 
-
         var userWithBuildPattern = new UserWithBuilderPattern.Builder()
                 .id(3L)
                 .firstName("firstName")
