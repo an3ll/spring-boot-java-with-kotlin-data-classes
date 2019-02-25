@@ -1,17 +1,19 @@
 package se.inera.intyg.intygsbestallning.user
 
+import java.lang.IllegalArgumentException
+
 class UserWithBuilderPattern private constructor(builder: UserWithBuilderPattern.Builder) {
 
-  val id: Long?
-  val firstName: String?
-  val lastName: String?
-  val address: Address?
+  val id: Long
+  val firstName: String
+  val lastName: String
+  val address: Address
 
   init {
-    this.id = builder.id
-    this.firstName = builder.firstName
-    this.lastName = builder.lastName
-    this.address = builder.address
+    this.id = builder.id ?: throw IllegalArgumentException()
+    this.firstName = builder.firstName ?: throw IllegalArgumentException()
+    this.lastName = builder.lastName ?: throw IllegalArgumentException()
+    this.address = builder.address ?: throw IllegalArgumentException()
   }
 
   class Builder {
