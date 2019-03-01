@@ -11,6 +11,12 @@ import java.util.List;
 @RequestMapping("/users")
 public class Controller {
 
+    private final UserRepository userRepository;
+
+    public Controller(final UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @GetMapping
     public ResponseEntity users() {
 
@@ -26,6 +32,18 @@ public class Controller {
                 .address(defaultAddress)
                 .build();
 
-        return ResponseEntity.ok(List.of(defaultUser, customUser, userWithBuildPattern));
+
+        var userEntity = new UserEntity(
+                defaultUser.getId(),
+                defaultUser.getFirstName(),
+                defaultUser.getLastName(),
+                13);
+
+        final UserEntity savedUser = userRepository.save(userEntity);
+
+        var backToDto = new User(savedUser);
+
+
+        return ResponseEntity.ok(List.of(backToDto));
     }
 }
